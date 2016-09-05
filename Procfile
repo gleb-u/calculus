@@ -1,1 +1,1 @@
-web: target/start
+web: target/startweb: target/universal/stage/bin/Calc -Dhttp.port=$PORT -Dother.prop=someValue
