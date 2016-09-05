@@ -48,5 +48,5 @@ object CalcBuild extends Build {
         )
       }
     )
-  ).enablePlugins(JavaAppPackaging)
+  ).enablePlugins(JettyPlugin).enablePlugins(JavaAppPackaging)
 }
