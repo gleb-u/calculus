@@ -15,6 +15,15 @@ class CalcServlet extends CalcStack {
 
   def decodeString(in: String): String = new String(java.util.Base64.getUrlDecoder.decode(in), "UTF-8")
   
+  get("/") {
+    <html>
+      <body>
+        <h1>Hello, world!</h1>
+        Say <a href="hello-scalate">hello to Scalate</a>.
+      </body>
+    </html>
+  }
+  
   get("/calculus") {
 	val expression = decodeString(params("query"))
 	val jobject = RPN.performCalculationJObject(expression)
