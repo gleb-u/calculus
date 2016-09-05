@@ -25,9 +25,13 @@ class CalcServlet extends CalcStack {
   }
   
   get("/calculus") {
-	val expression = decodeString(params("query"))
-	val jobject = RPN.performCalculationJObject(expression)
-	compact(render(jobject))
+	try {
+		val expression = decodeString(params("query"))
+		val jobject = RPN.performCalculationJObject(expression)
+		compact(render(jobject))
+	} catch {
+		case e:Exception => BadRequest("Something wrong")
+	}
   }
 
 }
