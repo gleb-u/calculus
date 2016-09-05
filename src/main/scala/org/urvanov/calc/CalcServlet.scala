@@ -18,8 +18,8 @@ class CalcServlet extends CalcStack {
   get("/") {
     <html>
       <body>
-        <h1>Hello, world!</h1>
-        Say <a href="hello-scalate">hello to Scalate</a>.
+        <h1>This is calculus app</h1>
+        use get /calculus?query= to perform calculations
       </body>
     </html>
   }
